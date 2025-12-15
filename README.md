@@ -8,11 +8,11 @@ The primary goal is to investigate **long-term trends in life expectancy** and e
 
 ---
 
-## 🌐 Website
-https://xztao621.github.io/global-health-analysis/ 
-A static website was built to present key visualizations and model results.
+## 🌐 [Website](https://xztao621.github.io/global-health-analysis/)
+A static website was built to present key visualizations and model results.  
 Location: `global_health/index.html`  
 Includes exploratory plots, summary tables, and model outputs.
+
 
 ---
 
@@ -77,6 +77,7 @@ by **Miguel Roca**, via Kaggle
 Licensed under **CC BY-NC-SA 4.0**  
 Used for **non-commercial, educational purposes**  
 Data has been cleaned and transformed
+
 
 
 

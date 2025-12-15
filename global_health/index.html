@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Global Health Data Analysis</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Global Health</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#data analysis">Data Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Machine Learning</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Thank you</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">Global Health Data</div>
+            <div class="masthead-subheading">By Zengtao Xing</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+        </div>
+    </header>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Introduction</h2>
+                <h3 class="section-subheading text-muted">Why investigate global health data?</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-heartbeat fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Individual Health</h4>
+                    <p class="text-muted">Our lifestyles often have a significant impact on our well-being. What factors
+                        in
+                        our lifestyles lead
+                        to long and healthy lives?</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-globe-americas fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Global Policy</h4>
+                    <p class="text-muted">We can use this data to understand public health differences across countries
+                        and regions. The results will also be more generalizable than in just a single country.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-stethoscope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Unseen Solutions</h4>
+                    <p class="text-muted">A lot of health research takes place on a microscopic level where it may not
+                        be directly relevant to human health. What trends can we uncover at a macrosopic level?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Summary Statistics -->
+    <section class="page-section" id="data analysis">
+        <div class="container">
+
+            <!-- Section heading -->
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Data Analysis</h2>
+                <h3 class="section-subheading text-muted">
+                    Exploratory analysis of global health indicators (1990–2019)
+                </h3>
+            </div>
+
+            <!-- Content -->
+            <div class="mx-auto" style="max-width: 800px;">
+
+                <!-- Lead description -->
+                <p class="text-muted text-center">
+                    This dataset contains global health indicators for 193 countries from 1990 to 2019.
+                    It incorporates data from the World Bank, WHO, UNICEF, Our World in Data, FAOSTAT, and Kaggle.
+                </p>
+
+                <!-- Dataset stats -->
+                <div class="d-flex justify-content-center gap-3 my-4 flex-wrap">
+                    <span class="badge bg-light text-dark border">193 Countries</span>
+                    <span class="badge bg-light text-dark border">1990–2019</span>
+                    <span class="badge bg-light text-dark border">22,050 Rows</span>
+                    <span class="badge bg-light text-dark border">150 Columns</span>
+                </div>
+
+                <!-- Attribution -->
+                <p class="text-muted small mt-4 border-top pt-3">
+                    Data source: <em>Global Health, Nutrition, Mortality, Economic Data</em> by Miguel Roca, via Kaggle.
+                    Licensed under CC BY-NC-SA 4.0.
+                    Used for non-commercial, educational purposes. Data has been cleaned and transformed.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Table 1 -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h4 class="text-center mb-3">Overall Dataset</h4>
+                <p class="text-muted text-center mb-4">
+                    Summary statistics for all countries and years included in the dataset.
+                </p>
+
+                <div class="table-responsive">
+                    <iframe src="assets/tables/describe.html" style="width:100%; height:420px; border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table 2 -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <h4 class="text-center mb-3">Missingness</h4>
+                <p class="text-muted text-center mb-4">
+                    The percent missing for each column in the dataset.
+                </p>
+                <p class="text-muted text-center mb-4">
+                    Note: Added columns "Diet Calories Protein"
+                    (the sum of "Diet Calories Animal Protein" and "Diet
+                    Calories Plant Protein") and "Region" for both visualization and analysis
+                    later.
+                </p>
+
+                <div class="table-responsive">
+                    <iframe src="assets/tables/missingness.html" style="width:100%; height:420px; border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table 3 -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h4 class="text-center mb-3">Kept Columns</h4>
+                <p class="text-muted text-center mb-4">
+                    Columns were filtered for at most 50% missingness in order to ensure sufficient data
+                    for model performance later.
+                </p>
+
+                <div class="table-responsive">
+                    <iframe src="assets/tables/kept_columns.html" style="width:100%; height:420px; border:none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h4 class="section-heading text-uppercase">Data Visualization</h2>
+                    <h3 class="section-subheading text-muted">Scatterplots for the relationships between life expectancy
+                        and various factors. Click on each graph to zoom in for more details.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/imr_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Infant Mortality Rate</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/gov_exp_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Government Spending</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/death_birth_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Deaths and Births</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/gni_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Income and Age</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/diet_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Macronutrients</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/plots/universal_care_scatter.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Health Coverage</div>
+                            <div class="portfolio-caption-subheading text-muted">Life Expectancy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="page-section" id="analysis-details">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <p class="text-muted">
+                    Line graphs and distribution plots to reveal trends in life expectancy across different regions and
+                    over time.
+                </p>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h4>Life Expectancy Over Time</h4>
+                    <p class="text-muted">
+                        This plot shows the global average life expectancy trend across genders from 1990–2019, showing
+                        significant improvement over the past few decades. Note: the distributions of years and
+                        gender are uniform, making these trends more accurate to assess.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="assets/img/plots/life_expectancy_line.html" width="100%" height="600px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2">
+                    <h4>Distribution of Life Expectancy by Gender</h4>
+                    <p class="text-muted">
+                        This histogram shows the distribution of life expectancies by gender. It is unimodal around
+                        65-75 years of age and left skewed. Life expectancies range from 25 to 85 years of age.
+                    </p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <iframe src="assets/img/plots/life_expectancy_histogram.html" width="100%" height="600px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Plot 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h4>Distribution of Life Expectancy by Continent</h4>
+                    <p class="text-muted">
+                        This boxplot shows the distribution of life expectancies by continent, offering insight into
+                        regional differences. Particularly, Africa appears to have the highest range of life
+                        expectancies (from around 33 to 83 years) with the lowest median at 57 years, while Europe has
+                        the one of the lowest ranges (from 63 to 87 years) with the highest median life expectancy of 77
+                        years.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="assets/img/plots/life_expectancy_box.html" width="100%" height="600px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Machine Learning -->
+    <section class="page-section bg-light" id="about">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Machine Learning</h2>
+                <h3 class="section-subheading text-muted">
+                    Predicting life expectancy using socioeconomic and health indicators
+                </h3>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h4>Data Preprocessing & Standardization</h4>
+                    <p class="text-muted">
+                        Prior to modeling, all continuous features were standardized to have means of 0 and variances of
+                        1. This ensures comparability across predictors
+                        of different scales and improves optimization stability for linear models. An example of a
+                        standardized distribution of a feature is shown to the right.
+                    </p>
+                    <p class="text-muted">
+                        Missing values were handled using previously established filtering criteria,
+                        retaining only columns with at most 50% missingness.
+                    </p>
+                    <p class="text-muted">
+                        Scikit-learn was then used to split the data into 20% testing and 80% for training the models
+                        below.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Optional: preprocessing visual -->
+                    <iframe src="assets/img/plots/z_imr_histogram.html" width="100%" height="600px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Linear Regression -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h4>Linear Regression</h4>
+                    <p class="text-muted">
+                        A baseline linear regression model was used to assess relationships
+                        between the predictors and life expectancy. Model performance was evaluated
+                        using RMSE and R² on the 20% of the data used for testing.
+                    </p>
+                    <p class="text-muted">
+                        While showing promising accuracy, the linear model struggled to capture nonlinear effects
+                        present in the data unlike the tree-based models below.
+                    </p>
+                    <p class="text-muted">
+                        RMSE: 4.039187038714324 <br>
+                        R²: 0.8204403180856953
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="assets/img/plots/linear_actual_vs_predicted.html" width="100%" height="450px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Random Forest -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2">
+                    <h4>Random Forest</h4>
+                    <p class="text-muted">
+                        A Random Forest regressor was used to capture nonlinear interactions and relationships between
+                        the features. This model substantially
+                        improved predictive performance over linear regression.
+                    </p>
+                    <p class="text-muted">
+                        The feature importance plot shows birth rate, death rate,
+                        and a lower estimate of under 5 mortality rate as dominant predictors.
+                    </p>
+                    <p class="text-muted">
+                        RMSE: 2.6943475436091515 <br>
+                        R²: 0.920103431255078
+                    </p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <iframe src="assets/img/plots/random_forest_feature_importance.html" width="100%" height="450px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- XGBoost -->
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4>XGBoost</h4>
+                    <p class="text-muted">
+                        Gradient boosting (XGBoost) achieved the best overall performance,
+                        showing that sequential tree construction can be effective at minimizing residual error.
+                    </p>
+                    <p class="text-muted">
+                        The feature importance plot shows birth rate, a lower estimate of under 5 mortality rate, and a
+                        lower estimate of infant mortality rate as the dominant predictors.
+                    </p>
+                    <p class="text-muted">
+                        RMSE: 2.5922504551087986 <br>
+                        R²: 0.9260437608741365
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="assets/img/plots/xgboost_feature_importance.html" width="100%" height="450px"
+                        style="border:none;">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Summary-->
+    <section class="page-section bg-light" id="summary">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Summary</h2>
+                <h3 class="section-subheading text-muted">Insights from a brief investigation of global health data</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted"> This was a look at global health data to identify important
+                        socioeconomic and public health factors affecting life expectancy. The EDA revealed strong
+                        correlations between life expectancy and various indicators such as birth rate, mortality rate,
+                        income, age demographics, macronutrients, and access to quality care.
+                    </p>
+                    <p class="large text-muted">Linear regression showed promising predictive capabilities, but tree
+                        based models provided substantial improvements. XGBoost resulted in the lowest errors when
+                        taking into account RMSE and R².
+                        Based on the feature importances from the random forest and XGBoost models, birth
+                        rate and some form of mortality rate were among the leading predictors of life expectancy.
+                    </p>
+                    <p class="large text-muted">Some limitations included missing data and relatively limited model
+                        selection. The dataset was uniformly distributed with respect to year and gender, but it
+                        contained a significant
+                        amount of missing data, and 90 columns that had over 50% missing values were dropped. As a
+                        result,
+                        there may have been bias as many socioeconomic factors were excluded. Additionally,
+                        while tree-based models improved accuracy, they sacrificed the simplicity of linear
+                        regression.
+                    </p>
+                    <p class="large text-muted">Another path to take would be to explore trends within a single year
+                        like 2019 to avoid confounding from life expectancy trends over time and to simplify comparison
+                        between countries. To address the issues, future directions could include more advanced
+                        imputation methods to retain more features, hyperparameter tuning for the models, and exploring
+                        additional algorithms such as neural networks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Thank you</h2>
+                <h3 class="section-subheading text-muted">Hope you enjoyed the analysis!</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-4 text-center text-lg-start small text-muted">
+                    Data source:
+                    <em>Global Health, Nutrition, Mortality, Economic Data</em>
+                    by Miguel Roca (Kaggle)
+                    • CC BY-NC-SA 4.0
+                    • Non-commercial use
+                    • Cleaned & transformed
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0 text-center">
+                    <a class="btn btn-dark btn-social mx-2" href="https://github.com/xztao621" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.kaggle.com/zengtaoxing"
+                        aria-label="Kaggle">
+                        <i class="fab fa-kaggle"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end small text-muted">
+                    © 2025 Zengtao Xing
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by Infant Mortality Rate</h2>
+                                <iframe src="assets/img/plots/imr_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by infant mortality rate. Hover
+                                    above the dots to see specific countries, years, infant mortality rates, and life
+                                    expectancies.
+                                    Overall, there is a downward trend in life expectancy as infant mortality rate
+                                    increases.
+                                </p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        Infant Mortality Rate
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by Government Health Expenditure</h2>
+                                <iframe src="assets/img/plots/gov_exp_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by government health expenditure as a
+                                    percent of GDP. Hover
+                                    above the dots to see specific countries, years, government health expenditures, and
+                                    life
+                                    expectancies. Overall, most countries have spent less than 10% of their GDP on
+                                    public
+                                    health, while the slightly upward trend indicates very little improvement in life
+                                    expectancy based on government health spending proportions.
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        Government Health Expenditure
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by Death Rate and Birth Rate</h2>
+                                <iframe src="assets/img/plots/death_birth_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by death rate and birth rate. Hover above
+                                    the dots to see specific countries, years, death rates, birth rates, and life
+                                    expectancies.
+                                    Overall, there is a downward trend in life expectancy as both death rate and birth
+                                    rate increase.
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        Death Rate and Birth Rate
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by GNI per Capita and Percent Aged 65+</h2>
+                                <iframe src="assets/img/plots/gni_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by GNI per capita and percent aged 65+ in
+                                    the 2019, the most recent year in the dataset.
+                                    Hover above the dots to see specific countries, years, GNI per capita, percent aged
+                                    65+, and life
+                                    expectancies. Note that GNI per capita was chosen over GDP per capita for
+                                    individual wealth, as
+                                    GNI factors in additional income from remittances and foreign aid while excluding
+                                    income from foreign citizens. Overall, there is an upward, particularly logarithmic,
+                                    trend in life expectancy as GNI per capita increases, and the percent of population
+                                    aged 65+ also shows a similar upward trend.
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        GNI per Capita and Percent Aged 65+
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by Daily Calories from Proteins and Fats
+                                </h2>
+                                <iframe src="assets/img/plots/diet_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by daily calories from proteins and fats.
+                                    Hover above the dots to see specific countries, years, calories from macronutrients,
+                                    and life expectancies. Overall, there is a positive correlation between calories
+                                    from proteins and fats and life expectancies.
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        Daily Calories from Proteins and Fats
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Life Expectancy by Health Coverage</h2>
+                                <iframe src="assets/img/plots/universal_care_scatter.html" width="100%" height="600px"
+                                    style="border:none;">
+                                </iframe>
+                                <p>This is a scatterplot of life expectancy by universal health care coverage scores by
+                                    the WHO. Note that the health coverage scores factor in both quality and variety of
+                                    care as well as access to care. Hover
+                                    above the dots to
+                                    see specific countries, years, health coverage scores, and life expectancies.
+                                    Overall, there is a positive correlation between universal health coverage and life
+                                    expectancies, with countries with low-cost and high-quality healthcare like Canada
+                                    leading.</p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Predictor Variables:</strong>
+                                        Universal Health Coverage
+                                    </li>
+                                    <li>
+                                        <strong>Outcome:</strong>
+                                        Life Expectancy
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
